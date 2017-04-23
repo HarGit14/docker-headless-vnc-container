@@ -36,6 +36,16 @@ ADD ./src/common/install/ $INST_SCRIPTS/
 ADD ./src/ubuntu/install/ $INST_SCRIPTS/
 RUN find $INST_SCRIPTS -name '*.sh' -exec chmod a+x {} +
 
+### Install digikam5 and acl
+RUN apt-get update && apt-get install -y \
+  software-properties-common && \
+  add-apt-repository ppa:philip5/extra && \
+  apt-get update && \
+  apt-get install -y \
+  digikam5 \
+  acl \
+  && rm -rf /var/lib/apt/lists/*
+  
 ### Install some common tools
 RUN $INST_SCRIPTS/tools.sh
 
@@ -56,7 +66,7 @@ RUN $INST_SCRIPTS/libnss_wrapper.sh
 ADD ./src/common/scripts $STARTUPDIR
 RUN $INST_SCRIPTS/set_user_permission.sh $STARTUPDIR $HOME
 
-USER 1984
+USER 1000
 
 ENTRYPOINT ["/dockerstartup/vnc_startup.sh"]
 CMD ["--tail-log"]
