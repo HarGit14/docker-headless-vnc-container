@@ -44,6 +44,8 @@ RUN apt-get update && apt-get install -y \
   apt-get install -y \
   digikam5 \
   acl \
+  locales \
+  language-pack-de \
   && rm -rf /var/lib/apt/lists/*
   
 ### Install some common tools
