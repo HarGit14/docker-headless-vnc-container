@@ -46,7 +46,13 @@ RUN apt-get update && apt-get install -y \
   acl \
   locales \
   language-pack-de \
+  language-pack-en \
   && rm -rf /var/lib/apt/lists/*
+  
+### set locales 
+RUN locale-gen en_US.UTF-8 \
+  update-locale LANG=en_US.UTF-8
+ENV LANG=en_US.UTF-8 
   
 ### Install some common tools
 RUN $INST_SCRIPTS/tools.sh
