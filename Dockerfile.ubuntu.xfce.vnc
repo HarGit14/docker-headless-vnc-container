@@ -36,7 +36,7 @@ ADD ./src/common/install/ $INST_SCRIPTS/
 ADD ./src/ubuntu/install/ $INST_SCRIPTS/
 RUN find $INST_SCRIPTS -name '*.sh' -exec chmod a+x {} +
 
-### Install digikam5 and acl
+### Install digikam5 and acl, exiftool
 RUN apt-get update && apt-get install -y \
   software-properties-common && \
   add-apt-repository ppa:philip5/extra && \
@@ -44,7 +44,11 @@ RUN apt-get update && apt-get install -y \
   apt-get install -y \
   digikam5 \
   acl \
+  iputils-ping \
   locales \
+  libimage-exiftool-perl \
+  net-tools \
+  perl-doc \
   language-pack-de \
   language-pack-en \
   && rm -rf /var/lib/apt/lists/*
