@@ -40,8 +40,10 @@ RUN find $INST_SCRIPTS -name '*.sh' -exec chmod a+x {} +
 RUN apt-get update && apt-get install -y \
   software-properties-common && \
   add-apt-repository ppa:philip5/extra && \
+  add-apt-repository ppa:pmjdebruijn/darktable-release \
   apt-get update && \
   apt-get install -y \
+  darktable \
   digikam5 \
   acl \
   iputils-ping \
