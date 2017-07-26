@@ -1,4 +1,4 @@
-# This Dockerfile is used to build an headless vnc image based on Ubuntu 16.04
+# This Dockerfile is used to build an headless vnc image based on Ubuntu 17.04
 
 FROM ubuntu:17.04
 
@@ -44,7 +44,7 @@ RUN apt-get update && apt-get install -y \
   apt-get update && \
   apt-get install -y \
   darktable \
-  digikam5 \
+  digikam \
   acl \
   iputils-ping \
   locales \
