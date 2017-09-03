@@ -17,7 +17,7 @@ fi
 $STARTUPDIR/chrome-init.sh
 
 ## resolve_vnc_connection
-VNC_IP=$(ip addr show eth0 | grep -Po 'inet \K[\d.]+')
+VNC_IP=$(hostname -i)
 
 ## change vnc password
 echo -e "\n------------------ change VNC password  ------------------"
