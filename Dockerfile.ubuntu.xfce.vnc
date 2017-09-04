@@ -45,6 +45,7 @@ RUN apt-get update && apt-get install -y \
   apt-get install -y \
   darktable \
   digikam \
+  kipi-plugins \
   acl \
   iputils-ping \
   locales \
