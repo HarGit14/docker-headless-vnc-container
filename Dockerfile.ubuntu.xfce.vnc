@@ -43,7 +43,6 @@ RUN apt-get update && apt-get install -y \
   add-apt-repository ppa:pmjdebruijn/darktable-release  && \
   apt-get update && \
   apt-get install -y \
-  darktable \
   digikam \
   kipi-plugins \
   acl \
