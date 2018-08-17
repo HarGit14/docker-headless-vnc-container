@@ -4,6 +4,6 @@ set -e
 
 echo "Install Firefox"
 apt-get update 
-apt-get install -y firefox=55*
+apt-get install -y firefox
 apt-mark hold firefox
 apt-get clean -y
