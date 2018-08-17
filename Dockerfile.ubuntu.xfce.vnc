@@ -39,8 +39,8 @@ RUN find $INST_SCRIPTS -name '*.sh' -exec chmod a+x {} +
 ### Install digikam5 and acl, exiftool
 RUN apt-get update && apt-get install -y \
   software-properties-common && \
-  add-apt-repository ppa:philip5/extra && \
-  add-apt-repository ppa:pmjdebruijn/darktable-release  && \
+  ### add-apt-repository ppa:philip5/extra && \
+  ### add-apt-repository ppa:pmjdebruijn/darktable-release  && \
   apt-get update && \
   apt-get install -y \
   digikam \
