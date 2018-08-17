@@ -1,9 +1,9 @@
 # This Dockerfile is used to build an headless vnc image based on Ubuntu 17.04
 
-FROM ubuntu:17.04
+FROM ubuntu:18.04
 
 MAINTAINER Tobias Schneck "tobias.schneck@consol.de"
-ENV REFRESHED_AT 2017-04-28
+ENV REFRESHED_AT 2018-08-17
 
 LABEL io.k8s.description="Headless VNC Container with Xfce window manager, firefox and chromium" \
       io.k8s.display-name="Headless VNC Container based on Ubuntu" \
